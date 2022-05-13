@@ -1,6 +1,3 @@
-// Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados.
-//Puedes usar este array para probar tu función:
-
 const duplicates = [
 	"sushi",
 	"pizza",
@@ -14,9 +11,16 @@ const duplicates = [
 	"pasta",
 	"soda",
 ];
+
+const finalArray = [];
+
 function removeDuplicates(param) {
-	let mySet = new Set(param);
-	return [...mySet];
+	for (const item of param) {
+		if (!finalArray.includes(item)) {
+			finalArray.push(item);
+		}
+	}
+	return finalArray;
 }
 
-console.log(removeDuplicates(duplicates));
+console.log(removeDuplicates(prueba2));
